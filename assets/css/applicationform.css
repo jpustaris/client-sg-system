@@ -1,0 +1,1348 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+
+    
+}
+body {
+    background-color: #393BCA;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full height to center vertically */
+}
+
+.form-box-steps {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.image-preview {
+    position: relative;
+    height: 126px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#uploadedImage {
+    display: none;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#noImageText {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    color: #666;
+}
+
+/* Form header */
+.form-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.header-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Personal Data */
+.input-group {
+    display: flex;
+    flex-direction: column; /* Align label and input vertically */
+    width: 48%; /* Adjust width to occupy half of the available space */
+}
+
+/* Form alignment */
+.input-row {
+    display: flex; /* Align input fields in a row */
+    justify-content: space-between; /* Distribute fields evenly */
+    margin-bottom: 15px; /* Space between rows */
+}
+.highlight {
+    border: 2px solid red; /* Change to your preferred highlight color */
+}
+
+.input-group label {
+    margin-bottom: 5px;
+}
+
+.input-group input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.highlight-upload {
+    border: 2px solid red; /* Highlight border */
+    background-color: rgba(255, 0, 0, 0.1); /* Optional: Light red background */
+}
+
+/* Divider */
+.divider {
+    width: 1px;
+    background-color: #000;
+    height: 100%;
+    margin-left: 20px;
+}
+
+/* Navigation buttons styling */
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns buttons to the right */
+    margin-top: 20px; /* Optional spacing */
+}
+
+.prev-button,
+.next-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #393BCA;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Optional space between buttons */
+}
+
+
+.prev-button:hover,
+.next-button:hover {
+    background-color: #2c2e8a;
+}
+/* Step 1 styling */
+
+.instruction-1 {
+    font-size: 24px;
+    text-align: center;
+}
+.form-step#step-1 {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    width: 800px; /* Consistent width */
+    background: white;
+    margin: 50px auto;  /* Centers the element horizontally and adds margin for vertical spacing */
+  }
+  
+
+.instruction {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+    background: white;
+}
+
+.instruction h3 {
+    font-size: 35px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.step-1-grid {
+    display: flex;
+    gap: 30px;
+    background: white;
+}
+
+.upload-document {
+    border: 1px solid rgb(199, 198, 198);
+}
+
+.upload-section {
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.document-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.document-subtitle {
+    display: block; /* Display as block element */
+    padding: 8px 20px; /* Increased padding for more spacing */
+    border-radius: 8px; /* Rounded corners */
+    background-color: rgba(220, 53, 69, 0.3); /* Slightly darker background for better contrast */
+    color: #dc3545; /* Text color */
+    font-size: 12px; /* Increased font size */
+    font-weight: bold; /* Make the text bold */
+    text-align: left; /* Left align the text */
+}
+
+.document-no {
+    margin-top: 10px;
+}
+
+.unique-remove-btn {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #dc3545;
+    color: #ffffff;
+    text-align: center;
+    align-items: center;
+    margin-left: 50px;
+    border-radius: 5px;
+}
+
+.unique-remove-btn:hover {
+    background-color: #f1b0b7;
+}
+
+.unique-remove-btn i {
+    margin-right: 5px; /* Space between the icon and text */
+    font-size: 16px; /* Adjust icon size if needed */
+    vertical-align: middle; /* Align icon vertically with text */
+}
+
+.upload-picture label {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically */
+    text-align: center; /* Ensures text is centered */
+}
+
+.upload-label {
+    font-size: 20px; /* Adjust size as necessary */
+    font-weight: bold; /* Make it bold */
+    display: block; /* Ensures it occupies full width */
+    margin-bottom: 8px; /* Adds some space below the title */
+    text-align: center;
+}
+
+.upload-instruction {
+    display: block; /* Display as block element */
+    padding: 8px 20px; /* Increased padding for more spacing */
+    border-radius: 8px; /* Rounded corners */
+    background-color: rgba(220, 53, 69, 0.3); /* Slightly darker background for better contrast */
+    color: #dc3545; /* Text color */
+    font-size: 12px; /* Increased font size */
+    font-weight: bold; /* Make the text bold */
+    margin-bottom: 10px; /* Space below the instruction */
+    text-align: left; /* Left align the text */
+}
+
+.image-preview {
+    padding: 10px; /* Padding for aesthetics */
+    position: relative;
+    height: 126px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#uploadedImage {
+    display: none;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+
+
+/* Mobile Styling */
+@media only screen and (max-width: 600px) {
+    .form-step#step-1 {
+        width: 100%; /* Full width on mobile */
+        padding: 10px;
+        border-radius: 0;
+        margin: 0;  /* Centers the element horizontally and adds margin for vertical spacing */
+
+    }
+
+    .form-step#step-1 .form-steps-content {
+        width: 100%; /* Ensure form content takes up full width */
+    }
+
+    .instruction {
+        font-size: 12px;
+        padding: 8px;
+        margin-bottom: 20px;
+    }
+
+    .instruction h3 {
+        font-size: 26px;
+    }
+
+    .step-1-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .step-1-grid .upload-section h2 {
+        font-size: 18px;
+    }
+    .upload-section, .document-section {
+        flex: 1;
+        width: 100%;
+    }
+    
+    .unique-remove-btn {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .upload-label {
+        font-size: 18px;
+    }
+
+    .upload-instruction {
+        font-size: 10px;
+        padding: 6px 15px;
+    }
+    .document-section h2 {
+        font-size: 16px;
+        text-align: left;
+    }
+    .document-subtitle {
+        font-size: 10px;
+        margin-top: 2px;
+    }
+    .image-preview {
+        border: 1px solid #ccc;
+    }
+  
+    .form-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .upload-btn {
+        padding: 5px;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;  
+        text-align: center;
+    }
+    .input-group label {
+        font-size: 15px;
+    }
+    .login-container {
+        width: 100%;
+        max-width: 400px; /* Limit the max width for better layout */
+        height: auto;
+        padding: 20px; /* Adjust padding for mobile */
+    }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Step 2 styling */
+/* Step 2 styling for desktop */
+.form-step#step-2 {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px 20px 5px 20px;
+    width: 1100px;
+    margin: 50px auto;  /* Centers the element horizontally and adds margin for vertical spacing */
+
+}
+
+.step-2-grid {
+    flex-wrap: wrap; /* Allow wrapping to new lines */
+    gap: 20px; /* Space between fields */
+}
+
+/* Personal Data Step 2 */
+.input-group-step-2 {
+    display: flex;
+    flex-direction: column; /* Align label and input vertically */
+    width: 24%; /* Adjust width for 4 columns on desktop */
+}
+
+/* Form alignment for Step 2 */
+.input-row-step-2 {
+    display: flex; /* Align input fields in a row */
+    justify-content: space-between; /* Distribute fields evenly */
+    margin-bottom: 15px; /* Space between rows */
+}
+
+.personel-subtitle {
+    display: block;
+    padding: 8px 20px;
+    border-radius: 8px;
+    background-color: rgba(220, 53, 69, 0.3);
+    color: #dc3545;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.input-group-step-2 label {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.input-group-step-2 input[type="text"],
+.input-group-step-2 input[type="date"],
+.input-group-step-2 input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Mobile Styling */
+@media only screen and (max-width: 600px) {
+    /* Step 2: Full Width & Remove Extra Padding */
+    .form-step#step-2 {
+        width: 100%; /* Full width on mobile */
+        padding: 10px 10px 5px 10px ;
+        border-radius: 0;
+        margin: 0;
+    }
+    .form-step#step-2 h2{
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .form-step#step-2 .form-content {
+        width: 100%; /* Ensure form content takes up full width */
+    }
+
+    /* Ensure Step 2 grid takes up full width and isn't centered */
+    .step-2-grid {
+        display: flex;
+        width: 100%; /* Ensure grid fills the full width */
+    }
+    .input-group-step-2 label {
+        font-size: 14px;
+    }
+    /* Ensure each input field takes up full width */
+    .input-group-step-2 {
+        width: 100%; /* Full width for each input */
+        padding: 0; /* Remove padding for better fit */
+        margin: 0; /* No margin */
+    }
+
+    /* Ensure input fields take full width */
+    .input-row-step-2 {
+        flex-direction: column; /* Stack fields vertically */
+        gap: 10px; /* Adjust space between fields */
+        width: 100%; /* Ensure row fills full width */
+    }
+
+    .input-group-step-2 input[type="text"],
+    .input-group-step-2 input[type="date"],
+    .input-group-step-2 input[type="tel"] {
+        width: 100%; /* Ensure inputs take up full width */
+        padding: 10px; /* Adjust padding for more comfort */
+        margin: 0; /* Remove margin */
+        box-sizing: border-box; /* Include padding within width calculation */
+    }
+
+    .personel-subtitle {
+        font-size: 10px; /* Slightly smaller font size on mobile */
+        padding: 6px 12px; /* Adjust padding to make it more compact */
+        margin-bottom: 10px; /* Reduced margin for better alignment */
+    }
+}
+
+/* Step 3 styling */
+.form-step#step-3 {
+    background-color: #ffffff; /* Match Step 1 */
+    padding: 20px 20px 5px 20px; /* Match Step 1 */
+    border-radius: 5px; /* Match Step 1 */
+    margin: 50px auto;  /* Centers the element horizontally and adds margin for vertical spacing */
+    max-width: 1000px;
+  }
+  
+  .form-step#step-3 .highest-education-data .step-2-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Change the layout to 3 columns for Step 3 */
+  .form-step#step-3 .highest-education-data .input-field {
+    flex: 1 1 calc(25% - 20px); /* Three-column layout */
+    margin-bottom: 10px;
+  }
+  
+  .step-2-grid .input-field label {
+    margin-bottom: 5px; /* Adds a 5px space below the label */
+    display: block; /* Ensures the label behaves as a block element */
+  }
+  .step-2-grid .input-field label {
+    font-size: 15px;
+    }
+  .form-step#step-3 .highest-education-data .input-field input,
+  .form-step#step-3 .highest-education-data .input-field select,
+  .form-step#step-3 .highest-education-data .input-field textarea {
+    padding: 10px; /* Consistent padding */
+    border: 1px solid #ccc; /* Standard border for inputs */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%; /* Full width for inputs */
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 600px) {
+    .form-step#step-3 .highest-education-data .input-field {
+      flex: 1 1 100%; /* Make inputs take full width on small screens */
+    }
+    .form-step#step-3 h2 {
+        font-size: 18px;
+    }
+    .form-step#step-3 .highest-education-data .step-2-grid {
+      flex-direction: column; /* Stack items vertically */
+    }
+    .step-2-grid .input-field label {
+        font-size: 14px;
+        }
+    .form-step#step-3 {
+        padding: 15px 15px 0px 15px; /* Even smaller padding */
+        margin: 0px;  /* Centers the element horizontally and adds margin for vertical spacing */
+
+    }
+  
+  
+  }
+  
+  /* Further adjustments for very small screens */
+  @media (max-width: 480px) {
+    .form-step#step-3 {
+      padding: 15px 15px 0px 15px; /* Even smaller padding */
+    }
+    
+    .form-step#step-3 .highest-education-data .input-field {
+      flex: 1 1 100%; /* Ensure full-width layout */
+      margin-bottom: 15px; /* Add extra space between inputs */
+    }
+  
+   
+  }
+  
+/* Step 4 styling */
+.form-step#step-4 {
+    background-color: #ffffff; /* Match Step 1 */
+    padding: 15px 15px 0px 15px;
+    border-radius: 5px;
+    
+}
+
+.personel-subtitle-4 {
+    display: block; /* Display as block element */
+    padding: 8px 20px; /* Increased padding for more spacing */
+    border-radius: 8px; /* Rounded corners */
+    background-color: rgba(220, 53, 69, 0.3); /* Slightly darker background for better contrast */
+    color: #dc3545; /* Text color */
+    font-size: 12px; /* Increased font size */
+    font-weight: bold; /* Make the text bold */
+    text-align: left; /* Left align the text */
+    margin-bottom: 5px; 
+    margin-top: 5px;
+}
+.form-step#step-4 .highest-education-data .step-2-grid {
+    display: flex;
+    gap: 20px; /* Adjust gap between left and right sections */
+}
+.form-step#step-4 .highest-education-data {
+    margin-top: 10px;
+}
+/* Left Side: Family Information */
+.family-relatives {
+    flex: 1;
+    border-right: 1px solid rgb(103, 103, 103);
+    padding-right: 20px; /* Add padding to the right for spacing */
+    margin-bottom: 5px;
+}
+.remove-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 5px; /* Optional: add some spacing */
+}
+
+.remove-btn .bi-trash {
+    font-size: 1rem; /* Adjust size here (0.75rem is smaller) */
+    color: red; /* Optional: change color to red */
+
+}
+#removeImageBtn {
+    display: inline-block; /* Ensure it maintains its space */
+    width: 100px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    margin: 5px; /* Set consistent margins */
+    padding: 10px; /* Padding to make it visually appealing */
+    font-size: 16px; /* Font size for text */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Right Side: Reference Information */
+.reference-info {
+    flex: 1.5; /* Take more space compared to family section */
+}
+
+/* Row for each family member's information */
+.input-row {
+    display: flex;
+    gap: 10px; /* Space between fields */
+    margin-bottom: 10px; /* Space below each row */
+}
+
+.footer-info {
+    border-top: 1px solid rgb(103, 103, 103);
+}
+.footer-info h3 {
+    margin-top: 5px;
+}
+.footer-info .add-info {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+/* Specific styling for spouse input fields */
+.footer-info .input-field input {
+    width: 50%; /* Adjust this value as needed to change width */
+    margin-bottom: 10px;
+}
+
+/* Step 4 input field styling */
+.form-step#step-4 .input-field {
+    flex: 1; /* Each field takes equal space in the row */
+}
+
+/* Step 4 input field styling */
+.form-step#step-4 .input-field input {
+    padding: 10px; /* Consistent padding */
+    border: 1px solid #ccc; /* Standard border for inputs */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%; /* Full width for inputs */
+    height: 35px; /* Smaller input height */
+    font-size: 14px; /* Smaller input font size */
+    margin-top: 5px;
+}
+
+.add-btn {
+    padding: 7px 10px; /* Adjusts the padding */
+    font-size: 12px; /* Smaller font size */
+}
+
+.small-btn {
+    margin-left: 5px; /* Spacing between the title and buttons */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .form-step#step-4 .highest-education-data .step-2-grid {
+        flex-direction: column; /* Stack items vertically on mobile */
+    }
+    .form-step#step-4 h2{
+        font-size: 18px;
+    }
+    .form-step#step-4 h3{
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .form-step#step-4 label{
+        font-size: 14px;
+    }
+    .family-relatives, .reference-info {
+        flex: 1; /* Equal width on mobile */
+        border-right: none; /* Remove border for a cleaner look */
+        padding-right: 0;
+        margin-bottom: 15px; /* Add margin to separate sections */
+    }
+    .reference-info {
+        border-top: 1px solid black;
+    }
+    .input-row {
+        flex-direction: column; /* Stack each input in the row vertically */
+        gap: 15px; /* Increase space between inputs */
+    }
+
+    .footer-info .input-field input {
+        width: 100%; /* Full width for inputs on mobile */
+    }
+
+    .personel-subtitle-4 {
+        font-size: 14px; /* Slightly larger font for readability */
+        padding: 10px 15px;
+    }
+
+    .remove-btn .bi-trash {
+        font-size: 0.875rem; /* Adjust icon size */
+    }
+    .add-btn {
+        font-size: 12px; /* Smaller font size */
+    }
+    
+    .small-btn {
+        padding: 6px 8px; /* Adjusts the padding */
+        margin-left: 5px; /* Spacing between the title and buttons */
+    }
+}
+
+/* Step 5 styling */
+.form-step#step-5 {
+    background-color: #ffffff;
+    padding: 15px 15px 0px 15px;
+    border-radius: 8px;
+    max-width:1100px;
+    margin: 50px auto;  /* Centers the element horizontally and adds margin for vertical spacing */
+}
+.form-step#step-5 h2 {
+    margin-bottom: 10px;
+}
+
+.step-5-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to new lines */
+    gap: 20px 0px; /* Space between fields */
+    justify-content: space-between; /* Distribute fields evenly */
+}
+
+/* Step 5 Input Group */
+.input-group-step-5 {
+    display: flex;
+    flex-direction: column; /* Align label and input vertically */
+    flex: 1 1 calc(25% - 20px); /* Adjust width for 4 columns per row with gap space */
+}
+
+/* Align the labels consistently */
+.input-group-step-5 label {
+    margin-bottom: 5px;
+    white-space: nowrap; /* Prevent text from breaking into multiple lines */
+    text-align: left;
+}
+
+/* Input and textarea styling */
+.input-group-step-5 input[type="text"],
+.input-group-step-5 textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none; /* Prevent textarea resize */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    height: 50px;
+}
+
+/* Custom radio button styling */
+.custom-radio-group {
+    display: flex;
+    gap: 10px; /* Space between "Yes" and "No" */
+    margin-top: 10px; /* Space above the custom radio group */
+}
+
+.custom-radio {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the text */
+    padding: 10px 15px; /* Padding for clickable area */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer; /* Show pointer on hover */
+    transition: background-color 0.3s, color 0.3s;
+}
+.custom-radio:hover {
+    background-color: #e7e7e7; /* Light background on hover */
+}
+
+.custom-radio.selected {
+    background-color: #007bff; /* Change to a primary color when selected */
+    color: white; /* Text color when selected */
+    border: 1px solid #007bff; /* Border color when selected */
+}
+
+/* Full-width input for reasons */
+.input-group-step-5-full {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Make this field take up the entire row */
+    margin-top: 20px; /* Add spacing before */
+}
+
+/* Full width textarea label */
+.input-group-step-5-full label {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.input-group-step-5-full textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none; /* Prevent textarea resize */
+    height: 50px; /* Ensure this field is taller since it's for a longer response */
+    box-sizing: border-box;
+}
+
+/* Title styling for the Why Choose Us section */
+.why-choose-us-title {
+    width: 100%; /* Full width for title */
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.checkbox-container label {
+    display: block;
+    font-size: 16px;
+}
+
+.button-container {
+    margin-top: 5px;
+    background-color: white;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+}
+
+.form-content {
+    position: relative; /* Set position relative for error message positioning */
+    margin-bottom: 20px; /* Space between fields */
+}
+
+@media (max-width: 768px) {
+    .form-step#step-5 {
+        padding: 15px 15px 0px 15px;
+        margin: 0;  /* Centers the element horizontally and adds margin for vertical spacing */
+
+    }
+    .form-step#step-5 h2{
+       font-size: 18px;
+    }
+    .form-step#step-5 h3{
+        font-size: 18px;
+        text-align: left;
+     }
+    .step-5-grid {
+        flex-direction: column;
+    }
+    .input-group-step-5 label {
+        white-space: normal; /* Allow text to wrap on mobile */
+        font-size: 14px;
+    }
+    .input-group-step-5 {
+        flex: 1 1 100%;
+    }
+
+    .input-group-step-5-full {
+        width: 100%;
+    }
+
+    .custom-radio-group {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .why-choose-us-title {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    /* Custom Radio Selected Styling for Mobile */
+    .custom-radio.selected {
+        background-color: #007bff; /* Slightly darker blue for mobile */
+        color: white;
+        border: 1px solid #007bff;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .form-step#step-5 {
+        padding: 15px 15px 0px 15px;
+        margin: 0;  /* Centers the element horizontally and adds margin for vertical spacing */
+
+    }
+
+    .input-group-step-5 input[type="text"],
+    .input-group-step-5 textarea,
+    .input-group-step-5-full textarea {
+        font-size: 14px;
+    }
+
+    .custom-radio {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    .custom-radio.selected {
+        background-color: #007bff; /* Adjust selected color for smaller screens */
+        color: white;
+        border: 1px solid #007bff;
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .submit-button {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+/* Error message styling */
+
+/* Alert Modal */
+.alert-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* High z-index to appear above other content */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Alert Content */
+.alert-content {
+    background-color: #fefefe; /* White background */
+    padding: 20px;
+    border: 1px solid #888; /* Gray border */
+    border-radius: 8px; /* Rounded corners */
+    width: 75%; /* Adjusted width for a slightly wider modal */
+    max-width: 500px; /* Increased maximum width */
+    min-height: 150px; /* Added minimum height for more vertical space */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align: center; /* Center text */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for fading */
+}
+
+/* Fade In */
+.alert-modal.show .alert-content {
+    display: block; /* Ensure content is displayed */
+    opacity: 1; /* Fully visible */
+}
+
+/* Header for Alert */
+.alert-header {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center items horizontally */
+    margin-bottom: 15px; /* Space below header */
+}
+
+/* Title Styling */
+.alert-title {
+    font-size: 1.8em; /* Larger font for title */
+    margin-left: 10px; /* Space between icon and title */
+    color: #333; /* Text color */
+}
+
+/* Icon Style */
+.alert-icon {
+    width: 30px; /* Size of the icon */
+    height: 30px; /* Size of the icon */
+}
+
+/* Instruction Text with Box */
+.instruction-text {
+    display: inline-block;
+    padding: 10px 15px; /* Padding for the box */
+    border-radius: 8px; /* Rounded corners */
+    background-color: rgba(220, 53, 69, 0.2); /* Light red transparent background */
+    color: #dc3545; /* Solid dark red text color */
+    font-size: 1em; /* Regular font size */
+    transition: all 0.3s ease; /* Smooth transition */
+    margin-top: 10px; /* Space above */
+    margin-bottom: 20px; /* Space below */
+    text-align: center; /* Center text */
+    width: fit-content; /* Adjust width to fit content */
+    backdrop-filter: blur(3px); /* Add a subtle blur effect */
+}
+.upload-instruction-image {
+    display: inline-block;
+    padding: 5px 10px; /* Padding for the box */
+    border-radius: 8px; /* Rounded corners */
+    background-color: rgba(220, 53, 69, 0.2); /* Light red transparent background */
+    color: #dc3545; /* Solid dark red text color */
+    font-size: 14px; /* Regular font size */
+    transition: all 0.3s ease; /* Smooth transition */
+    margin-top: 10px; /* Space above */
+    margin-bottom: 10px; /* Space below */
+    text-align: center; /* Center text */
+    width: fit-content; /* Adjust width to fit content */
+    backdrop-filter: blur(3px); /* Add a subtle blur effect */
+}
+
+
+/* Alert Actions */
+.alert-actions {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center the button */
+}
+/* Modal actions */
+ .modal-actions {
+    display: flex; /* Flexbox layout */
+    justify-content: flex-end; /* Align buttons to the right */
+  }
+/* Button Styles */
+.btn-close {
+    min-width: 80px; /* Minimum width for the button */
+    padding: 10px 15px; /* Padding for consistent size */
+    background-color: #393BCA; /* Button background color */
+    color: #fff; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.btn-close:hover {
+    background-color: #2c2e8a; /* Darker shade on hover */
+}
+
+/* Email Verified Modal */
+.email-verified-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+
+}
+
+.email-verified-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    width: 90%;
+    z-index: 10000;
+margin-top: 10px;
+    max-width: 810px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Section */
+.email-verified-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email-verified-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.email-verified-title {
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Announcement Section */
+.email-verified-announcement p {
+    font-size: 17px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Columns layout */
+.email-verified-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* This defines the space between columns */
+}
+
+@media (min-width: 768px) {
+    .email-verified-columns {
+        flex-direction: row;
+        gap: 20px; /* Maintain gap in row layout */
+        padding-left: 45px;
+    }
+}
+
+/* Steps Section */
+.email-verified-steps,
+.email-verified-not-to-do {
+    border: 1px solid #2c2e8a; /* 1px solid black border */
+    border-radius: 20px; /* Rounded corners */
+    padding: 15px; /* Padding inside the columns */
+    background-color: #f9f9f9; /* Slight background color for contrast */
+    margin-bottom: 15px;
+}
+
+/* Remove the margin-bottom from the columns */
+.email-verified-steps h3,
+.email-verified-not-to-do h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.email-verified-steps ol,
+.email-verified-not-to-do ul {
+    margin-left: 20px;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.email-verified-steps ol li,
+.email-verified-not-to-do ul li {
+    margin-bottom: 10px;
+}
+
+/* Agreement Section */
+.email-verified-agreement {
+    margin-bottom: 20px;
+    
+}
+
+.checkbox-prompt {
+    display: block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: rgba(220, 53, 69, 0.2);
+    color: #dc3545;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.checkbox-prompt strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.checkbox-info {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.checkbox-info li {
+    font-size: 0.9em;
+    color: #dc3545;
+    margin-bottom: 5px;
+}
+
+/* Actions Section */
+.email-verified-actions {
+    text-align: center;
+}
+
+.btn-close {
+    background-color: #393BCA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-close:hover {
+    background-color: #1C1263;
+}
+
+@media (min-width: 768px) {
+    .email-verified-steps,
+    .email-verified-not-to-do {
+        width: 45%;
+    }
+}
+
+.fade-out {
+    opacity: 0; /* Change to 0 for fade-out effect */
+    transition: opacity 0.5s ease; /* Ensure this matches the timeout in JavaScript */
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s forwards; /* Fade-in effect */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.upload-container { /* Replace with your actual container class */
+    text-align: center; /* Center the inline-block element */
+}
+
+.upload-btn {
+    display: inline-block; /* Keep it inline-block for centering */
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;  
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+
+.upload-btn:hover {
+    background-color: #45a049;
+}
+
+.upload-btn:focus {
+    outline: none;
+}
+
+.upload-btn::file-selector-button {
+    display: none; /* Hide the default file input button */
+}
+
+
+/* Base Modal */
+.custom-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* High z-index to appear above other content */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe; /* White background */
+    padding: 20px;
+    width: 90%; /* Adjusted width */
+    max-width: 500px; /* Maximum width */
+    min-height: 150px; /* Minimum height */
+    border: 1px solid #888;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    
+    position: fixed; /* Position the modal */
+    top: 50%; /* Position from the top */
+    left: 50%; /* Position from the left */
+    transform: translate(-50%, -50%); /* Offset by 50% to truly center */
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+    margin: 10px; /* Space around buttons */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slightly lift the button on hover */
+}
+
+/* Button Active Effect */
+button:active {
+    transform: translateY(0); /* Reset position on click */
+}
+
+

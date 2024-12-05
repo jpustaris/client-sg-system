@@ -1,0 +1,1826 @@
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+  background: #393BCA;
+  color: white;
+}
+
+a {
+  color: #4154f1;
+  text-decoration: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+}
+
+.close-btn:hover {
+  color: red;
+}
+a:hover {
+  color: #717ff5;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "roboto", sans-serif;
+}
+.detail-header { 
+  color: black;
+  font-size: 20px;
+  font-family: "roboto", sans-serif;
+font-weight: 500;
+border-bottom: 1px solid #ccc;
+}
+
+#main {
+  margin-top: 60px;
+  padding: 20px 15px 10px 5px;
+  transition: all 0.3s;
+}
+
+@media (max-width: 1199px) {
+  #main {
+    padding: 20px 15px 10px 17px;
+    }
+}
+
+.pagetitle {
+  margin-bottom: 10px;
+}
+
+.pagetitle h1 {
+  font-size: 24px;
+  margin-bottom: 0;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+  background: #4154f1;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #6776f4;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.dropdown-menu {
+  border-radius: 4px;
+  padding: 10px 0;
+  animation-name: dropdown-animate;
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+  border: 0;
+  box-shadow: 0 5px 30px 0 rgba(82, 63, 105, 0.2);
+}
+
+.dropdown-menu .dropdown-header,
+.dropdown-menu .dropdown-footer {
+  text-align: center;
+  font-size: 15px;
+  padding: 10px 25px;
+}
+
+.dropdown-menu .dropdown-footer a {
+  color: #444444;
+  text-decoration: underline;
+}
+
+.dropdown-menu .dropdown-footer a:hover {
+  text-decoration: none;
+}
+
+.dropdown-menu .dropdown-divider {
+  color: #a5c5fe;
+  margin: 0;
+}
+
+.dropdown-menu .dropdown-item {
+  font-size: 14px;
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+
+.dropdown-menu .dropdown-item i {
+  margin-right: 10px;
+  font-size: 18px;
+  line-height: 0;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #f6f9ff;
+}
+
+@media (min-width: 768px) {
+  .dropdown-menu-arrow::before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    background: #fff;
+    position: absolute;
+    top: -7px;
+    right: 20px;
+    transform: rotate(45deg);
+    border-top: 1px solid #eaedf1;
+    border-left: 1px solid #eaedf1;
+  }
+}
+
+@keyframes dropdown-animate {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+  0% {
+    opacity: 0;
+  }
+}
+
+.bg-primary-light {
+  background-color: #cfe2ff;
+  border-color: #cfe2ff;
+}
+
+.bg-secondary-light {
+  background-color: #e2e3e5;
+  border-color: #e2e3e5;
+}
+
+.bg-success-light {
+  background-color: #d1e7dd;
+  border-color: #d1e7dd;
+}
+
+.bg-danger-light {
+  background-color: #f8d7da;
+  border-color: #f8d7da;
+}
+
+.bg-warning-light {
+  background-color: #fff3cd;
+  border-color: #fff3cd;
+}
+
+.bg-info-light {
+  background-color: #cff4fc;
+  border-color: #cff4fc;
+}
+
+.bg-dark-light {
+  background-color: #d3d3d4;
+  border-color: #d3d3d4;
+}
+
+.card {
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+}
+
+.card-header,
+.card-footer {
+  border-color: #ebeef4;
+  background-color: #fff;
+  color: #798eb3;
+  padding: 15px;
+}
+
+.card-title {
+  padding: 20px 0 15px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #012970;
+  font-family: "Poppins", sans-serif;
+}
+
+.card-title span {
+  color: #899bbd;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.card-img-overlay {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.alert-heading {
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+.btn-close {
+  background-size: 25%;
+}
+
+.btn-close:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.accordion-item {
+  border: 1px solid #ebeef4;
+}
+
+.accordion-button:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #012970;
+  background-color: #f6f9ff;
+}
+
+.accordion-flush .accordion-button {
+  padding: 15px 0;
+  background: none;
+  border: 0;
+}
+
+.accordion-flush .accordion-button:not(.collapsed) {
+  box-shadow: none;
+  color: #4154f1;
+}
+
+.accordion-flush .accordion-body {
+  padding: 0 0 15px 0;
+  color: #3e4f6f;
+  font-size: 15px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  font-family: "Nunito", sans-serif;
+  color: #899bbd;
+  font-weight: 600;
+}
+
+.breadcrumb a {
+  color: #899bbd;
+  transition: 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: #51678f;
+}
+
+.breadcrumb .breadcrumb-item::before {
+  color: #899bbd;
+}
+
+.breadcrumb .active {
+  color: #51678f;
+  font-weight: 600;
+}
+
+.nav-tabs-bordered {
+  border-bottom: 2px solid #ebeef4;
+}
+
+.nav-tabs-bordered .nav-link {
+  margin-bottom: -2px;
+  border: none;
+  color: #2c384e;
+}
+
+.nav-tabs-bordered .nav-link:hover,
+.nav-tabs-bordered .nav-link:focus {
+  color: #4154f1;
+}
+
+.nav-tabs-bordered .nav-link.active {
+  background-color: #fff;
+  color: #4154f1;
+  border-bottom: 2px solid #4154f1;
+}
+
+
+.logo {
+  line-height: 1;
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    width: 280px;
+  }
+}
+
+.logo img {
+  max-height: 34px;
+  margin-right: 6px;
+}
+
+.logo span {
+  font-size: 26px;
+  font-weight: 700;
+  color: #012970;
+  font-family: "Nunito", sans-serif;
+}
+
+.header {
+  transition: all 0.5s;
+  z-index: 997;
+  height: 60px;
+  box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+  background-color: #fff;
+  padding-left: 20px;
+  /* Toggle Sidebar Button */
+  /* Search Bar */
+}
+
+.header .toggle-sidebar-btn {
+  font-size: 32px;
+  padding-left: 10px;
+  cursor: pointer;
+  color: #012970;
+}
+
+.header .search-bar {
+  min-width: 360px;
+  padding: 0 20px;
+}
+
+@media (max-width: 1199px) {
+  .header .search-bar {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    box-shadow: 0px 0px 15px 0px rgba(1, 41, 112, 0.1);
+    background: white;
+    z-index: 9999;
+    transition: 0.3s;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .header .search-bar-show {
+    top: 60px;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.header .search-form {
+  width: 100%;
+}
+
+.header .search-form input {
+  border: 0;
+  font-size: 14px;
+  color: #012970;
+  border: 1px solid rgba(1, 41, 112, 0.2);
+  padding: 7px 38px 7px 8px;
+  border-radius: 3px;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.header .search-form input:focus,
+.header .search-form input:hover {
+  outline: none;
+  box-shadow: 0 0 10px 0 rgba(1, 41, 112, 0.15);
+  border: 1px solid rgba(1, 41, 112, 0.3);
+}
+
+.header .search-form button {
+  border: 0;
+  padding: 0;
+  margin-left: -30px;
+  background: none;
+}
+
+.header .search-form button i {
+  color: #012970;
+}
+
+
+.header-nav ul {
+  list-style: none;
+}
+
+.header-nav>ul {
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav .nav-icon {
+  font-size: 22px;
+  color: #012970;
+  margin-right: 25px;
+  position: relative;
+}
+
+.header-nav .nav-profile {
+  color: #012970;
+}
+
+.header-nav .nav-profile img {
+  max-height: 36px;
+}
+
+.header-nav .nav-profile span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.header-nav .badge-number {
+  position: absolute;
+  inset: -2px -5px auto auto;
+  font-weight: normal;
+  font-size: 12px;
+  padding: 3px 6px;
+}
+
+.header-nav .notifications {
+  inset: 8px -15px auto auto !important;
+}
+
+.header-nav .notifications .notification-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  transition: 0.3s;
+}
+
+.header-nav .notifications .notification-item i {
+  margin: 0 20px 0 10px;
+  font-size: 24px;
+}
+
+.header-nav .notifications .notification-item h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.header-nav .notifications .notification-item p {
+  font-size: 13px;
+  margin-bottom: 3px;
+  color: #919191;
+}
+
+.header-nav .notifications .notification-item:hover {
+  background-color: #f6f9ff;
+}
+
+.header-nav .messages {
+  inset: 8px -15px auto auto !important;
+}
+
+.header-nav .messages .message-item {
+  padding: 15px 10px;
+  transition: 0.3s;
+}
+
+.header-nav .messages .message-item a {
+  display: flex;
+}
+
+.header-nav .messages .message-item img {
+  margin: 0 20px 0 10px;
+  max-height: 40px;
+}
+
+.header-nav .messages .message-item h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #444444;
+}
+
+.header-nav .messages .message-item p {
+  font-size: 13px;
+  margin-bottom: 3px;
+  color: #919191;
+}
+
+.header-nav .messages .message-item:hover {
+  background-color: #f6f9ff;
+}
+
+.header-nav .profile {
+  min-width: 240px;
+  padding-bottom: 0;
+  top: 8px !important;
+}
+
+.header-nav .profile .dropdown-header h6 {
+  font-size: 18px;
+  margin-bottom: 0;
+  font-weight: 600;
+  color: #444444;
+}
+
+.header-nav .profile .dropdown-header span {
+  font-size: 14px;
+}
+
+.header-nav .profile .dropdown-item {
+  font-size: 14px;
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+
+.header-nav .profile .dropdown-item i {
+  margin-right: 10px;
+  font-size: 18px;
+  line-height: 0;
+}
+
+.header-nav .profile .dropdown-item:hover {
+  background-color: #f6f9ff;
+}
+
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+  width: 270px;
+  z-index: 996;
+  transition: all 0.3s;
+  padding: 20px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #aab7cf transparent;
+  box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
+  background-color: #fff;
+}
+
+@media (max-width: 1199px) {
+  .sidebar {
+    left: -300px;
+  }
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #fff;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #aab7cf;
+}
+
+@media (min-width: 1200px) {
+
+  #main,
+  #footer {
+    margin-left: 300px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .toggle-sidebar .sidebar {
+    left: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .toggle-sidebar #main,
+  .toggle-sidebar #footer {
+    margin-left: 0;
+  }
+
+  .toggle-sidebar .sidebar {
+    left: -300px;
+  }
+}
+
+.sidebar-nav {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sidebar-nav .nav-item {
+  margin-bottom: 5px;
+}
+
+.sidebar-nav .nav-heading {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #899bbd;
+  font-weight: 600;
+  margin: 10px 0 5px 15px;
+}
+
+.sidebar-nav .nav-link{
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #4154f1;
+  transition: 0.3;
+  background: #f6f9ff;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.sidebar-nav .nav-link i {
+  font-size: 16px;
+  margin-right: 10px;
+  color: #4154f1;
+}
+
+.sidebar-nav .nav-link.collapsed {
+  color: #012970;
+  background: #fff;
+}
+
+.sidebar-nav .nav-link.collapsed i {
+  color: #899bbd;
+}
+
+.sidebar-nav .nav-link:hover {
+  color: #4154f1;
+  background: #f6f9ff;
+}
+
+.sidebar-nav .nav-link:hover i {
+  color: #4154f1;
+}
+
+.sidebar-nav .nav-link .bi-chevron-down {
+  margin-right: 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.sidebar-nav .nav-link:not(.collapsed) .bi-chevron-down {
+  transform: rotate(180deg);
+}
+
+.sidebar-nav .nav-content {
+  padding: 5px 0 0 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sidebar-nav .nav-content a {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #012970;
+  transition: 0.3;
+  padding: 10px 0 10px 40px;
+  transition: 0.3s;
+}
+
+.sidebar-nav .nav-content a i {
+  font-size: 20px;
+  margin-right: 8px;
+  line-height: 0;
+  border-radius: 50%;
+}
+
+.sidebar-nav .nav-content a:hover,
+.sidebar-nav .nav-content a.active {
+  color: #4154f1;
+}
+
+.sidebar-nav .nav-content a.active i {
+  background-color: #4154f1;
+}
+
+.tr:hover {
+  background-color: #f0f0f0;
+}
+
+
+/*--------------------------------------------------------------
+# Icons list page
+--------------------------------------------------------------*/
+.iconslist {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem;
+  padding-top: 15px;
+}
+
+.iconslist .icon {
+  background-color: #fff;
+  border-radius: 0.25rem;
+  text-align: center;
+  color: #012970;
+  padding: 15px 0;
+}
+.icon h5 {
+  font-size: 15px;
+  color: black;
+}
+.iconslist i {
+  margin: 0.25rem;
+  font-size: 2.5rem;
+}
+
+.iconslist .label {
+  font-family: var(--bs-font-monospace);
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  padding: 0.25rem;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #666;
+}
+
+.profile-pic {
+width: 50px; /* Ensures the profile picture fits the container */
+border-radius: 50%; /* Makes the profile picture circular */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+transition: box-shadow 0.3s; /* Smooth transition for shadow effect */
+margin-bottom: 10px;
+}
+.section p {
+color: white;
+}
+.section-header {
+margin-bottom: 10px;
+}
+.section-header h1 p {
+color: white;
+font-size: 1px;
+font-weight: 600;
+}
+.icon {
+margin: 20px;
+text-align: center;
+}
+
+.profile-pic {
+width: 100px;
+height: 100px;
+border-radius: 50%;
+}
+
+.label {
+margin-top: 20px;
+}
+/* Data row title alignment */
+.data-row-title {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 15px; /* Space below title */
+  font-weight: 550;
+  border-bottom: 1px solid black;
+}
+
+/* Data row layout */
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px; /* Adds spacing between rows */
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for .data-row */
+.data-row:hover {
+  background-color: rgba(0, 123, 255, 0.1); /* Light blue background on hover */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+
+.data-row strong {
+  font-family: 'Fira Mono', monospace; /* Use 'Fira Mono' font */
+
+  flex: 1;
+  text-align: left; /* Aligns labels to the left */
+  color: black;
+}
+
+/* Applying Fira Mono font to .data-value */
+.data-row .data-value {
+  font-family: 'Fira Mono', monospace; /* Use 'Fira Mono' font */
+  text-align: right; /* Aligns dynamic data to the right */
+  color: red; /* Red color for data values */
+}
+
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: transparent; /* Make sure background is transparent by default */
+}
+
+.status-blue {
+  background-color: #007bff; /* Blue background for "To Interview" */
+}
+
+.status-red {
+  background-color: red; /* Red background for "Error" or other status */
+}
+
+.status-green {
+  background-color: green; /* Green background for "Deployed" */
+}
+
+.status-yellow {
+  background-color: yellow; /* Yellow background for "Floating" */
+}
+
+.status-orange {
+  background-color: orange; /* Orange background for "Interview in Progress" */
+}
+
+.status-pending {
+  background-color: grey; /* Grey background for "Pending" */
+}
+
+
+.table-container {
+height: calc(79vh - 76px); 
+border-radius: 10px;
+overflow: auto; 
+}
+
+
+
+.pagination-container {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 5px 5px 5px 17px;
+border: 1px solid #ddd;
+border-radius: 4px;
+background-color: #f9f9f9;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+font-size: 13px; /* Slightly smaller font */
+}
+
+.pagination-content {
+display: flex;
+align-items: center;
+font-weight: bold;
+gap: 5px; /* Add space between "Page 1" and "Showing" text */
+
+}
+
+.pagination-info {
+margin-left: auto; /* Align this to the right */
+font-weight: bold;
+}
+
+.pagination-button {
+background-color: #ccc; /* Grey button background */
+color: #333; /* Dark grey text */
+border: none;
+padding: 4px 8px; /* Smaller padding for compact buttons */
+font-size: 12px; /* Smaller font size for buttons */
+border-radius: 4px;
+cursor: pointer;
+margin: 0 5px; /* Add space between buttons */
+}
+
+.pagination-button:disabled {
+background-color: #e0e0e0; /* Lighter grey for disabled state */
+color: #999; /* Light grey text for disabled state */
+cursor: not-allowed;
+}
+
+.pagination-button:hover:not(:disabled) {
+background-color: #4154f1;
+color: #fff;
+}
+
+
+
+.table-responsive {
+overflow-x: auto;
+}
+
+.table {
+width: 100%;
+max-width: 100%;
+margin-bottom: 0;
+background-color: transparent; 
+}
+
+th i{
+margin-right: 8px; 
+font-weight: 200;
+}
+/* Apply Noto font to all table cells */
+.table td {
+  font-family: 'Noto';
+  vertical-align: middle; /* Ensures all table cells align vertically */
+}
+
+.table td .applicant-info {
+display: flex;
+align-items: center;
+}
+.table th,
+.table td {
+  vertical-align: middle; 
+  border-top: 1px solid #dee2e6; 
+  transition: background-color 0.1s;
+  text-align: left;
+}
+.table td {
+font-size: 0.8rem;
+}
+.table tr td {
+transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+
+}
+.table th .form-check,
+.table td .form-check {
+margin: 0; /* Reset margin */
+margin-bottom: 5px; /* Adjust as necessary */
+}
+
+
+.user-row:hover {
+background-color: #f8f9fa; /* Light grey background on hover */
+box-shadow: 0 0 3px #4154f1; /* Blue glow effect */
+}
+
+/* CSS for dropdown item hover effect */
+.dropdown-menu .dropdown-item {
+color: #333; /* default text color */
+padding: 8px 16px; /* padding for a better clickable area */
+transition: background-color 0.2s ease, color 0.2s ease; /* smooth transition */
+}
+
+.dropdown-menu .dropdown-item:hover {
+background-color: #f0f0f0; /* light gray hover background */
+color: #4154f1; /* blue text color on hover */
+cursor: pointer;
+}
+
+.table th {
+font-weight: 500;
+text-align: left;
+font-size: 13px; 
+color: #333; 
+padding: 2px 1px 2px 2px; 
+background-color: #f8f9fa; 
+border-bottom: 2px solid #e0e0e0; 
+letter-spacing: 0.5px; 
+text-transform: uppercase; 
+}
+
+
+
+.table tbody + tbody {
+border-top: 2px solid #dee2e6; 
+}
+.user-row {
+transition: background-color 0.3s ease; 
+}
+.user-row .btn {
+font-size: 12px; 
+border-radius: 3px; /* Slightly rounded corners */
+}
+.user-row .btn-primary {
+background-color: #4154f1; /* Consistent primary button color */
+color: white; /* Button text color */
+}
+.applicantviewbtn {
+background-color: #007bff;
+color: white;
+}
+.user-row .btn-success {
+background-color: #28a745; /* Success button color */
+color: white; /* Button text color */
+}
+
+.user-row .btn-danger {
+background-color: #dc3545; /* Danger button color */
+color: white; /* Button text color */
+}
+
+
+.form-check-input {
+margin-top: 0.3rem; /* Align checkboxes better */
+}
+
+.form-check {
+display: flex;
+align-items: center; /* Vertically center the checkbox */
+justify-content: center; /* Horizontally center the checkbox */
+}
+
+
+
+
+
+
+
+
+
+/* Status Badge Styles */
+.status-approved {
+display: inline-block;
+padding: 4px 8px;
+border-radius: 12px;
+background-color: #28a745; /* Green for Approved */
+color: white; /* White text color */
+font-size: 12px; /* Smaller font size */
+transition: all 0.3s ease; /* Smooth transition */
+text-align: center;
+}
+
+/* Base styling for statuses */
+.status-blue {
+  background-color: rgba(0, 123, 255, 0.2); /* Light blue */
+  color: #007bff; /* Blue text color */
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.status-yellow {
+  background-color: rgba(255, 193, 7, 0.2); /* Light yellow */
+  color: #ffc107; /* Yellow text color */
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.status-green {
+  background-color: rgba(40, 167, 69, 0.2); /* Light green */
+  color: #28a745; /* Green text color */
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.status-orange {
+  background-color: rgba(255, 159, 64, 0.2); /* Light orange */
+  color: #ff9f40; /* Orange text color */
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Additional example for pending status */
+.status-pending {
+  background-color: rgba(220, 53, 69, 0.2); /* Light red */
+  color: #dc3545; /* Dark red text color */
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+
+.form-check-input[type="checkbox"] {
+width: 15px;
+height: 15px;
+background-color: #fff; /* Checkbox background color */
+border: 1px solid #999; /* Checkbox border color */
+border-radius: 4px; 
+vertical-align: middle;
+}
+
+.form-check-input[type="checkbox"]:checked {
+background-color: #007bff; /* Checked background color */
+border-color: #007bff; /* Checked border color */
+}
+
+.form-check-input[type="checkbox"]:focus {
+outline: none; /* Remove focus outline */
+}
+.profile-circle {
+width: 33px;
+height: 33px;
+border-radius: 50%; /* Circular shape */
+object-fit: cover; /* Ensures the image fills the container */
+border: 1px solid #393BCA; /* Optional: Add a border around the image */
+}
+
+/* start of applicant Modal background */
+.applicant-modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1000; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+}
+
+/* Modal content styling */
+.modal-content-approveuser {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #ffffff;
+padding: 20px;
+border: 1px solid #888;
+border-radius: 8px;
+width: 80%;
+max-width: 700px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.modal-content-confirmuser {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #ffffff;
+padding: 20px;
+border: 1px solid #888;
+border-radius: 8px;
+width: 80%;
+max-width: 480px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.modal-content-successful-approve {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #ffffff;
+padding: 20px;
+border: 1px solid #888;
+border-radius: 8px;
+width: 80%;
+max-width: 480px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.approve-indicator-title-container {
+display: flex;
+align-items: center; /* Align items vertically */
+gap: 15px;
+}
+/* Instruction text */
+.instruction-text-approve {
+font-size: 1em; /* Slightly smaller than the title */
+color: #dc3545; /* Change text color */
+margin-bottom: 20px; /* Space below the instruction */
+text-align: left; /* Left-align text */
+background-color: rgba(220, 53, 69, 0.2); /* Add background color */
+padding: 10px; /* Optional: Add padding for better spacing */
+border-radius: 8px; /* Optional: Add rounded corners */
+}
+/* Add margin to the icon */
+.icon-space {
+margin-right: 10px; /* Adjust the value as needed for spacing */
+}
+.applicant-info-approve {
+display: grid;
+color: #333;
+grid-template-columns: 150px 1fr;
+column-gap: 15px;
+row-gap: 10px;
+align-items: center;
+font-size: 16px;
+border: 1px solid #dcdcdc;
+border-radius: 8px;
+padding: 10px;
+background-color: #f7f7f7;
+width: 100%; /* Full width */
+box-sizing: border-box; /* Ensures padding is included in the width */
+margin: 0; /* Removes any default margin */
+}
+
+
+/* Label styling */
+.applicant-info-approve .label {
+font-weight: 400;
+color: #555;
+text-align: left;
+margin: 0;
+padding: 8px 10px;
+background-color: white;
+}
+
+/* Data styling */
+.applicant-info-approve .data {
+font-weight: 600;
+color: #222;
+text-align: left;
+margin: 0;
+padding: 8px 10px;
+background-color: white;
+
+}
+
+.modal-body {
+display: grid;
+grid-template-columns: 1fr; /* Single-column layout for full width */
+gap: 20px; /* Consistent gap between sections */
+padding: 20px;
+border: 1px solid #ccc; 
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px; 
+margin-bottom: 10px;
+margin-top: 10px;
+background-color: #ffffff; /* White background for the modal */
+}
+
+.profile-section {
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+
+.profile-container-approveuser {
+display: flex;
+align-items: flex-start;
+
+width: 100%;
+background-color: #fcfcfc; /* Very light gray background */
+box-sizing: border-box;
+}
+
+.remarkstextarea {
+font-size: 18px;
+font-weight: 700;
+color: #333;
+margin-top: 5px;
+}
+
+/* Text area for remarks */
+.textarea {
+width: 100%;
+height: 120px; /* Slightly taller */
+padding: 12px;
+border-radius: 5px;
+background-color: #ffffff; /* Light gray background inside text area */
+margin-bottom: 5px;
+font-size: 14px;
+resize: none;
+color: #333;
+}
+
+
+
+
+/* reject content */
+
+.modal-content-rejecteduser {
+position: absolute; /* Use absolute positioning */
+top: 50%; /* Position at the vertical center */
+left: 50%; /* Position at the horizontal center */
+transform: translate(-50%, -50%); /* Center the modal */
+background-color: #fefefe; /* White background */
+padding: 20px; /* Inner padding */
+border: 1px solid #888; /* Gray border */
+border-radius: 8px; 
+width: 80%; /* Responsive width */
+max-width: 600px; /* Increased maximum width */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.modal-content-rejectuser {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #ffffff;
+padding: 20px;
+border: 1px solid #888;
+border-radius: 8px;
+width: 80%;
+max-width: 480px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.modal-content-successful-reject {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #ffffff;
+padding: 20px;
+border: 1px solid #888;
+border-radius: 8px;
+width: 80%;
+max-width: 480px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.applicant-modal .modal-title {
+font-size: 15px;
+font-weight: 700;
+text-align: left;
+color: #333;
+font-family: "roboto", sans-serif;
+margin-bottom: 10px;
+text-transform: uppercase;
+}
+.modal-title-sure {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: black;
+}
+.applicant-info-reject {
+display: grid;
+color: #333;
+grid-template-columns: 150px 1fr;
+column-gap: 15px;
+row-gap: 10px;
+align-items: center;
+font-size: 16px;
+border: 1px solid #dcdcdc;
+border-radius: 8px;
+padding: 10px;
+background-color: #f7f7f7;
+width: 100%; 
+box-sizing: border-box;
+margin: 0; 
+}
+
+
+/* Label styling */
+.applicant-info-reject .label {
+font-weight: 400;
+color: #555;
+text-align: left;
+margin: 0;
+padding: 8px 10px;
+background-color: white;
+}
+
+/* Data styling */
+.applicant-info-reject .data {
+font-weight: 600;
+color: #222;
+text-align: left;
+margin: 0;
+padding: 8px 10px;
+background-color: white;
+
+}
+.profile-container-rejectuser {
+display: flex;
+align-items: flex-start;
+
+width: 100%;
+background-color: #fcfcfc; /* Very light gray background */
+box-sizing: border-box;
+margin-bottom: 15px;
+}
+
+
+/* Profile container */
+.profile-container {
+display: flex; /* Flex layout for profile image and info */
+align-items: center; /* Align items vertically */
+margin-bottom: 20px; /* Space below profile */
+}
+
+/* Profile image */
+.applicant-modal .profile-circle-approve {
+width: 150px; /* Fixed width */
+height: 160px; /* Fixed height */
+border-radius: 10%; /* Circular shape */
+object-fit: cover; /* Ensure the image covers */
+margin-right: 20px; /* Space between image and info */
+}
+/* Profile image */
+.applicant-modal .profile-circle-reject {
+width: 150px; /* Fixed width */
+height: 160px; /* Fixed height */
+border-radius: 10%; /* Circular shape */
+object-fit: cover; /* Ensure the image covers */
+margin-right: 20px; 
+}
+.applicant-modal .applicant-info {
+display: flex;
+flex-direction: column; 
+}
+
+.applicant-modal .applicant-info p {
+margin: 5px 0; 
+font-size: 16px;
+color: #333; 
+}
+
+
+.modal-actions {
+display: flex; 
+justify-content: flex-end; 
+gap: 10px; 
+}
+
+.applicant-modal .btn {
+padding: 8px 15px; /* Padding */
+border: none; /* No border */
+border-radius: 5px; 
+cursor: pointer; /* Pointer cursor */
+font-size: 12px; /* Font size */
+}
+.btn {
+padding: 8px 15px; /* Padding */
+border: none; /* No border */
+border-radius: 5px; 
+cursor: pointer; /* Pointer cursor */
+font-size: 12px; /* Font size */
+}
+.applicant-modal .btn-cancel {
+width: auto; 
+min-width: 80px;
+background-color: #ffffff; 
+color: black; 
+border: 1px solid #4154f1; 
+border-radius: 5px; 
+}
+.applicant-modal .title-reject {
+color: #dc3545; 
+}
+
+
+.modal-content-rejectuser-fetch {
+position: absolute; 
+top: 50%; 
+left: 50%; 
+transform: translate(-50%, -50%);
+background-color: #fefefe; 
+padding: 20px; 
+border: 1px solid #888; 
+border-radius: 8px; 
+width: 80%; 
+max-width: 300px; 
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+text-align: center;  /* Center the content inside the modal */
+}
+
+.applicant-modal-fetch {
+display: none; 
+position: fixed; 
+z-index: 1000; 
+left: 0;
+top: 0;
+width: 100%; 
+height: 100%; 
+background-color: rgba(0, 0, 0, 0.7);
+display: flex;
+align-items: center; /* Vertically center the modal */
+justify-content: center; /* Horizontally center the modal */
+}
+
+.applicant-modal-fetch .title-reject-fetch {
+color: #000000; /* Change the color to match the icon */
+font-size: 18px;
+font-weight: 700;
+text-align: center;
+margin-top: 10px; /* Adjust margin for spacing between icon and text */
+}
+
+/* Modal for user details */
+#detailsModal {
+display: none; /* Hidden by default */
+position: fixed;
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgba(0, 0, 0, 0.4); /* Background overlay */
+padding-top: 60px;
+}
+
+/* User details modal content */
+#detailsModal .modal-content {
+background-color: #fff;
+margin: 5% auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+max-width: 600px; /* Limit width of modal */
+border-radius: 8px; /* Rounded corners */
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+.detailscontent-user {
+margin-bottom: 10px;
+}
+/* Specific heading for user details */
+.user-details-heading {
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 20px;
+color: #333;
+}
+.close-icon {
+font-size: 24px;
+font-weight: bold;
+cursor: pointer;
+color: #000000;
+transition: color 0.3s;
+position: absolute; 
+right: 23px;
+top: 15px; 
+}
+
+.close-icon:hover,
+.close-icon:focus {
+color: #000;
+}
+
+.user-details-row {
+margin-bottom: 15px;
+font-size: 16px;
+color: #555;
+display: flex; /* Use flex to align label and value */
+justify-content: space-between; /* Distribute space evenly between label and value */
+}
+
+/* Labels within the user details */
+.user-details-row strong {
+font-weight: 600;
+color: #444;
+width: 120px; /* Fixed width for labels for alignment */
+text-align: left; /* Align labels to the left */
+}
+
+/* Values within the user details */
+.user-details-value {
+color: #333;
+text-align: right; /* Align data to the right */
+}
+.applicant-modal .btn-ok-details {
+background-color: #4154f1; 
+color: white; 
+min-width: 60px; 
+margin-top: 10px;
+}
+
+.email-link {
+color: #1a73e8;  /* Make the email link blue like a typical link */
+text-decoration: none;  /* Remove underline */
+}
+
+.email-link:hover {
+text-decoration: underline;  /* Add underline when hovering over the link */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-confirm {
+  background-color: #28a745; /* Initial green background */
+  color: white; /* White text */
+  min-width: 40px; /* Minimum button width */
+  padding: 8px 8px; /* Button padding */
+  font-family: "Roboto", sans-serif; /* Roboto font */
+  border: none; /* Remove default border */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition effect */
+}
+
+.btn-confirm:hover {
+  background-color: #218838; /* Darker green for hover state */
+  color: white; /* Ensure text remains white */
+  transform: scale(1.05); /* Slight zoom effect */
+  cursor: pointer; /* Pointer cursor for clarity */
+}
+
+
+
+
+
+
+
+
+/* Base styles for the tooltip */
+[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%; /* Position above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+/* Show the tooltip on hover */
+[data-tooltip]:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.applicant-modal img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+.applicant-modal .btn-ok {
+background-color: #28a745; 
+border: 1px solid #4154f1; 
+color: white; 
+min-width: 60px; 
+}
+.applicant-modal .btn-confirm {
+background-color: #28a745; 
+border: 1px solid #4154f1; 
+color: white; 
+min-width: 60px; 
+}
+.applicant-modal .btn-confirm-reject {
+background-color: #dc3545; 
+border: 1px solid #4154f1; 
+color: white; 
+min-width: 60px; 
+
+}
+.btn-confirm-reject {
+background-color: #dc3545; 
+border: 1px solid #4154f1; 
+color: white; 
+min-width: 60px; 
+padding: 8px 15px; 
+border-radius: 5px; 
+font-size: 12px; 
+}
+.btn-ok {
+display: flex;
+align-items: center; 
+position: relative;
+}
+
+.spinner {
+display: inline-block;
+border: 3px solid rgba(255, 255, 255, 0.5);
+border-radius: 50%;
+border-top-color: #fff;
+width: 1em;
+height: 1em;
+animation: spin 0.6s linear infinite;
+margin-left: 10px; 
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+
+.applicant-modal .title-approve {
+color: #28a745; 
+}
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.rejection-days {
+font-weight: bold;
+border-radius: 5px;
+text-align: left; 
+}
+
+/* Style the Bootstrap icon to be a much bigger red dot */
+.rejection-dot {
+font-size: 32px; /* Increase the size to 32px for a larger dot */
+color: #e74c3c; /* Red color for the dot */
+vertical-align: middle; /* Align the dot vertically with the text */
+margin-right: 8px; /* Add more space between the dot and the number */
+}
+
+/* Optional: Add a tooltip for more detailed information */
+.rejection-days:hover {
+cursor: pointer;
+text-decoration: underline;
+}
+
+.rejection-days:hover::after {
+content: "Rejection details";
+position: absolute;
+background: #333;
+color: #fff;
+padding: 5px;
+border-radius: 3px;
+font-size: 12px;
+}
+.copy-status {
+  display: inline-block;
+  position: absolute;
+  left: 100%;  /* Position to the right of the icon */
+  margin-left: 5px; /* Space between the icon and the tooltip */
+  background-color: rgba(0, 0, 0, 0.75); /* Dark background */
+  color: white; /* Text color */
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 4px; /* Rounded corners */
+  opacity: 0; /* Start with hidden message */
+  transition: opacity 0.3s ease; /* Smooth fade-in/fade-out */
+  white-space: nowrap; /* Prevent text wrapping */
+  z-index: 10; /* Ensure it appears above other content */
+}
+
+
+
+
+.footer {
+  padding: 20px 0;
+  font-size: 14px;
+  transition: all 0.3s;
+  border-top: 1px solid #cddfff;
+}
+
+.footer .copyright {
+  text-align: center;
+  color: #ffffff;
+}
+
+.footer .credits {
+  padding-top: 5px;
+  text-align: center;
+  font-size: 13px;
+  color: #ffffff;
+}
+.table th .text-left-detail{
+  text-align: left;
+}

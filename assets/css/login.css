@@ -1,0 +1,407 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #f0f0f0; /* Light background for contrast */
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container {
+  flex: 6; /* 60% of the page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.login-container {
+  flex: 4; /* 40% of the page */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7; /* Background color for the entire right side */
+  padding: 60px; /* Increased padding */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.login-container.fade-in {
+  opacity: 1; /* Fully opaque */
+}
+
+.form-wrapper {
+  width: 100%; /* Ensure the form wrapper takes full width */
+  max-width: 600px; /* Limit the maximum width for the form */
+}
+
+.welcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px; /* Increased margin */
+  width: 100%; /* Make sure the container takes full width */
+}
+
+.welcome-container .logo {
+  height: 60px; /* Increased height */
+  margin-right: 12px;
+}
+.welcome-container h1 {
+  color: #1C1263;
+}
+.welcome-container img.logo {
+  margin-top: 15px;
+  align-items: center;
+}
+
+h1 {
+  color: black;
+  font-size: 30px; /* Increased font size */
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 6px;
+}
+
+h2 {
+  margin-bottom: 25px; /* Increased margin */
+  font-size: 25px; /* Increased font size */
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+}
+
+.form-group {
+  margin-bottom: 20px; /* Increased margin */
+  width: 100%;
+}
+
+label {
+  margin-bottom: 30px; /* Increased margin */
+  font-size: 18px; /* Increased font size */
+  color: rgb(0, 0, 0);
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  margin-top: 10px;
+  padding: 15px; /* Increased padding */
+  font-size: 19px; /* Increased font size */
+  border-radius: 5px;
+  border: 2px solid #4154f1;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 20px; /* Increased padding */
+  font-size: 20px; /* Increased font size */
+  background-color: #4154f1;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #393BCA;
+}
+
+.google-signup {
+  margin-top: 30px; /* Increased margin */
+  color: #1C1263;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.google-signup a {
+  color: #1C1263;
+  font-size: 15px;
+}
+
+.google-signup h5 {
+  text-align: center;
+  margin: 0;
+  line-height: 40px;
+  color: rgb(0, 0, 0);
+  font-size: 18px; /* Increased font size */
+}
+
+.forgot-password-container {
+  margin-top: 20px; /* Increased margin */
+  margin-bottom: 20px; /* Increased margin */
+  font-size: 16px; /* Increased font size */
+  color: rgb(0, 0, 0);
+}
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input[type="password"],
+.password-container input[type="text"] {
+  width: 100%;
+  padding-right: 50px; /* Ensure space for the eye icon */
+  box-sizing: border-box; /* Ensure padding doesn't affect the width */
+  border: 2px solid #4154f1;
+  border-radius: 5px;
+}
+.password-container input[type="text"] {
+  font-size: 18px;
+  margin-top: 10px;
+
+  padding: 15px; /* Increased padding */
+
+}
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input[type="password"] {
+  width: calc(100%);
+  padding-right: 30px;
+}
+
+.password-container i {
+  position: absolute;
+  right: 20px;
+  top: 60%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: none; /* Ensure the icon is initially hidden */
+  color: #393BCA;
+
+}
+/* Styles for larger screens */
+.login-container {
+  flex: 4; /* 40% of the page */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center on larger screens */
+  align-items: center;
+  background-color: #f7f7f7; /* Background color for the entire right side */
+  padding: 60px; /* Increased padding */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+  .image-container {
+    display: none; /* Hide the image container completely */
+  }
+
+  html, body {
+    height: 100%; /* Ensure the body takes up the full height of the viewport */
+    margin: 0; /* Remove default margin */
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: 100vh; /* Make the container take up the full viewport height */
+    margin: 0;
+    padding: 10px 0 0 0; /* Small padding at the top */
+    box-sizing: border-box;
+    background-color: white;
+    overflow: hidden; /* Prevent scrolling inside the container */
+  }
+  
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    background-color: #f7f7f7; /* Background color for the entire container */
+    padding: 20px; /* Adjust padding for mobile */
+    max-width: 350px; /* Limit the width for mobile devices */
+    width: 100%; /* Full width of its parent container */
+    box-sizing: border-box;
+    height: 100vh; /* Make the container take full viewport height */
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  
+  .welcome-container .logo {
+    height: 40px; /* Increased height */
+    margin-right: 12px;
+  }
+
+  .forgot-password-container {
+    font-size: 14px;
+  }
+
+  .google-signup h5 {
+    font-size: 15px;
+  }
+label {
+  font-size: 12px;
+}
+  input[type="email"],
+  input[type="password"] {
+    font-size: 14px;
+    padding: 8px;
+    margin-top: 10px; /* Margin between inputs */
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px; /* Rounded input fields */
+    border: 2px solid #4154f1;
+  }
+  .password-container input[type="password"],
+  .password-container input[type="text"] {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+    margin-top: 10px; /* Margin between inputs */
+    box-sizing: border-box; /* Ensure padding doesn't affect the width */
+    border: 2px solid #4154f1;
+    border-radius: 5px;
+  }
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    width: 75%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  button[type="submit"] {
+    font-size: 18px;
+    padding: 8px;
+    width: 100%;
+    background-color: #4154f1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #393BCA;
+  }
+
+  button[type="submit"]:active {
+    background-color: #4154f1;
+  }
+}
+
+
+/* Modal styles */
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Overlay background */
+}
+
+.modal-content {
+  position: absolute; /* Absolute positioning to center it */
+  top: 50%; /* Move down 50% of the viewport height */
+  left: 50%; /* Move right 50% of the viewport width */
+  transform: translate(-50%, -50%); /* Shift it back by 50% of its own width/height */
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for a nice effect */
+}
+
+.header {
+  display: flex;          /* Use flexbox layout */
+  justify-content: space-between; /* Distribute space between the elements */
+  align-items: center;    /* Vertically align the elements */
+}
+
+.header-content h2 {
+  margin: 0;              /* Remove margin from h2 */
+}
+
+.close {
+  color: black;
+  font-size: 28px;
+  cursor: pointer;        /* Change cursor to pointer to indicate it's clickable */
+}
+
+
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Spinner styles */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #000;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply the fade-in animation to the login container and image */
+body {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.image-container img, #login-container {
+  animation: fadeIn 1s ease-in-out;
+}

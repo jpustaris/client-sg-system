@@ -1,0 +1,158 @@
+/* General Reset */
+body, h1, h2, p, ul, li, ol {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    background-color: #393BCA;
+    color: #333;
+    padding: 20px;
+}
+
+
+
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+/* Main Section Styling */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.step {
+    margin-bottom: 30px;
+}
+
+.step h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: left; /* Aligns the heading text to the left */
+}
+
+.step p {
+    margin-bottom: 5px;
+    color: #3c3c3c;
+    text-align: left; /* Aligns the paragraph text to the left */
+}
+
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: #555;
+    text-align: left; /* Ensures the list items are left-aligned */
+}
+
+.step-image {
+    width: 100%; /* Full width for mobile devices */
+    max-width: 500px; /* Prevents the image from being too large */
+    margin: 10px auto; /* Centers the image horizontally */
+    display: block; /* Makes the image a block-level element */
+    border: 1px solid #cccc
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Smaller header font size */
+    }
+
+    main {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .step h2 {
+        font-size: 1.2rem; /* Slightly smaller headings */
+    }
+
+    .step-image {
+        width: 80%; /* Increase image width to take more space on small screens */
+    }
+
+    ul, ol {
+        margin-left: 10px; /* Reduce left margin */
+    }
+
+    footer {
+        font-size: 0.7rem; /* Slightly smaller footer text */
+    }
+}
+
+
+
+/* Close button styling */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #979595; /* Red background */
+    color: white;
+    border: none;
+    border-radius: 10%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10; /* Make sure the button is on top */
+}
+
+.close-btn:hover {
+    background-color: #717070; /* Darker red on hover */
+}
+
+.step {
+    position: relative; /* Needed for positioning the button */
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ccc; /* Optional border for visual effect */
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.step h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.step p {
+    margin-bottom: 5px;
+    color: #3c3c3c;
+    text-align: left;
+}

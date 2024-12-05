@@ -1,0 +1,498 @@
+/* register.css */
+
+/* General styles */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #f0f0f0; /* Light background for contrast */
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container {
+  flex: 6; /* 60% of the page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.login-container {
+  flex: 4; /* 40% of the page */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7; /* Background color for the entire right side */
+  padding: 30px; /* Reduced padding for smaller form */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-wrapper {
+  width: 100%; /* Ensure the form wrapper takes full width */
+  max-width: 400px; /* Limit the maximum width for the form */
+}
+
+.welcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; /* Reduced margin */
+  width: 100%; /* Make sure the container takes full width */
+}
+.welcome-container h1 {
+  color: #1C1263;
+}
+.welcome-container .logo {
+  height: 50px; /* Reduced logo height */
+  margin-right: 10px; /* Reduced margin */
+}
+.welcome-container img.logo {
+  margin-top: 15px;
+  align-items: center;
+}
+
+h1 {
+  color: black;
+  font-size: 30px; /* Reduced font size */
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 6px;
+}
+
+h2 {
+  margin-bottom: 20px; /* Reduced margin */
+  font-size: 22px; /* Reduced font size */
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+}
+
+.form-group {
+  margin-bottom: 10px; /* Reduced margin */
+  width: 100%;
+}
+
+label {
+  margin-bottom: 20px; /* Reduced margin */
+  font-size: 16px; /* Reduced font size */
+  color: rgb(0, 0, 0);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px; /* Reduced padding */
+  font-size: 16px; /* Reduced font size */
+  border-radius: 5px;
+  border: 2px solid #4154f1;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 20px; /* Increased padding */
+  font-size: 20px; /* Increased font size */
+  background-color: #4154f1;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+button[type="submit"]:hover {
+  background-color: #4154f1;
+}
+.google-signup {
+  margin-top: 20px; /* Reduced margin */
+  color: #1C1263;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.google-signup a {
+  color: #1C1263;
+  font-size: 14px; /* Reduced font size */
+}
+
+.google-signup h5 {
+  text-align: center;
+  margin: 0;
+  font-size: 16px; /* Reduced font size */
+  line-height: 30px;
+  color: rgb(0, 0, 0);
+}
+
+.forgot-password-container {
+  margin-top: 15px; /* Reduced margin */
+  margin-bottom: 15px; /* Reduced margin */
+  font-size: 14px; /* Reduced font size */
+  color: rgb(0, 0, 0);
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input[type="password"],
+.password-container input[type="text"] {
+  width: 100%;
+  padding-right: 50px; /* Ensure space for the eye icon */
+  box-sizing: border-box; /* Ensure padding doesn't affect the width */
+  border: 2px solid #4154f1;
+  border-radius: 5px;
+}
+.password-container input[type="text"] {
+  font-size: 18px;
+}
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input[type="password"] {
+  width: calc(100%);
+  padding-right: 30px;
+}
+
+.password-container i {
+  position: absolute;
+  right: 20px;
+  top: 60%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: none; /* Ensure the icon is initially hidden */
+  color: #393BCA;
+}
+
+@media only screen and (max-width: 600px) {
+  .image-container {
+    display: none; /* Hide the image container completely */
+  }
+
+  html, body {
+    height: 100%; /* Make sure the HTML and body elements take up the full height */
+    margin: 0; /* Remove default margin */
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
+    height: 100vh; /* Take up the full height of the viewport */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    overflow: hidden; /* Prevent scrolling inside the container */
+  }
+  
+  .login-container {
+    width: 100%; /* Full width */
+    max-width: 350px; /* Limit max width */
+    background-color: white;
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: soft shadow */
+  }
+  
+
+  .login-wrapper {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .welcome-container .logo {
+    height: 40px;
+    margin-right: 12px;
+  }
+
+  .forgot-password-container {
+    font-size: 14px;
+  }
+
+  .google-signup h5{
+    font-size: 12px;
+  }
+  .google-signup a{
+    font-size: 12px;
+  }
+  label {
+    font-size: 15px;
+  }
+  input[type="email"],
+  input[type="password"],
+  input[type="text"], /* Added text input for register */
+  input[type="tel"] { /* Added telephone input for register */
+    font-size: 14px;
+    padding: 8px;
+    margin-top: 10px; /* Margin between inputs */
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px; /* Rounded input fields */
+    border: 2px solid #4154f1;
+  }
+  .password-container input[type="text"] {
+    font-size: 19px;
+  }
+  button[type="submit"] {
+    font-size: 16px;
+    padding: 8px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #4154f1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .close-btn {
+    background-color: #393BCA; /* Button color */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: block; /* Make it a block element */
+    margin: 0px auto; /* Center button with auto margins */
+    font-size: 12px; /* Font size */
+  }
+
+  button[type="submit"]:hover {
+    background-color: #393BCA;
+  }
+
+  button[type="submit"]:active {
+    background-color: #4154f1; /* Slightly darker on tap */
+  }
+
+  /* Styling for the Terms and Conditions checkbox */
+  .form-group.terms {
+    font-size: 12px; /* Smaller font for the checkbox section */
+    margin-top: 10px; /* Add space between the checkbox and other form elements */
+  }
+
+  .form-group.terms label {
+    font-size: 12px; /* Set label font size */
+  }
+
+  .form-group.terms a {
+    color: #1C1263; /* Set color for the link */
+  }
+
+  .form-group.terms a:hover {
+    text-decoration: underline; /* Add underline on hover for better user interaction */
+  }
+}
+
+
+
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply the fade-in animation to the body */
+body {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.image-container img, .login-container {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Overlay background */
+}
+
+.modal-content {
+  position: absolute; /* Absolute positioning to center it */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust to center itself */
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow effect */
+  width: 80%;
+  max-width: 495px; /* Maximum width */
+}
+
+
+
+.instruction-box {
+  display: block; /* Make it a block element */
+  padding: 10px 15px; /* Padding for the box */
+  border-radius: 8px; /* Rounded corners */
+  background-color: rgba(220, 53, 69, 0.2); /* Light red background */
+  color: #dc3545; /* Text color */
+  font-size: 0.9em; /* Font size */
+  margin-bottom: 20px; /* Space below the box */
+  text-align: left; /* Left-aligned text */
+}
+.instruction-box {
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.instruction-box.success {
+  background-color: green;
+  color: white;
+}
+
+.instruction-box.error {
+  background-color: red;
+  color: white;
+}
+
+.close-btn {
+  background-color: #393BCA; /* Button color */
+  color: white; /* Text color */
+  padding: 10px 15px; /* Padding for button */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  display: block; /* Make it a block element */
+  margin: 0px auto; /* Center button with auto margins */
+  font-size: 16px; /* Font size */
+}
+
+.close-btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* New styles for message list */
+#messageList {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+}
+
+#messageList li {
+  padding: 10px; /* Add padding to each message */
+  margin: 5px 0; /* Margin between messages */
+  border-left: 4px solid #4CAF50; /* Green left border */
+  background-color: #f9f9f9; /* Light background for messages */
+  border-radius: 4px; /* Rounded corners for messages */
+}
+
+/* Add icon next to the title */
+#modalTitle {
+  display: flex; /* Flexbox for aligning icon and text */
+  align-items: center; /* Center align items */
+}
+
+#modalTitle img {
+  width: 30px; /* Set icon size */
+  margin-right: 10px; /* Space between icon and title */
+}
+
+
+/* Add these styles to register.css */
+.mb-20 {
+  margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+.mt-20 {
+  margin-top: 20px; /* Adjust the value as needed */
+}
+
+
+
+
+
+
+.tutorialmodal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.tutorial-content {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.modal-btn {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#yesButton {
+  background-color: #4154f1; /* Blue for Yes button */
+  color: white;
+}
+
+#yesButton:hover {
+  background-color: #2e3bb0; /* Darker blue on hover */
+}
+
+#noButton {
+  background-color: #717070; /* Gray for No button */
+  color: white;
+}
+
+#noButton:hover {
+  background-color: #585858; /* Darker gray on hover */
+}
+

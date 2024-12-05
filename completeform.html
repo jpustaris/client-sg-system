@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations</title>
+    <link href="assets/img/Layer 1.png" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome CDN -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #393BCA; /* Default background color */
+        }
+        .container {
+            background-color: white;
+            padding: 20px; /* Reduced padding */
+            border-radius: 8px; /* Smaller border radius */
+            text-align: center;
+            max-width: 600px; /* Smaller max-width */
+            width: 100%;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .logo {
+            max-width: 80px; /* Adjust logo size */
+            margin-bottom: 8px; /* Smaller margin */
+        }
+        h1 {
+            font-size: 28px; /* Smaller font size */
+            color: #000000;
+            margin-top: 5px;
+        }
+        .message-box {
+            display: inline-block;
+            padding: 15px; /* Reduced padding for smaller message box */
+            border-radius: 8px; /* Smaller border radius */
+            background-color: rgba(40, 167, 69, 0.2);
+            color: #28a745;
+            font-size: 14px; /* Smaller font size */
+            transition: all 0.3s ease;
+            text-align: left;
+            width: calc(100% - 30px); /* Adjusted width */
+        }
+        .message-box div {
+            margin-bottom: 8px; /* Smaller margin */
+        }
+        .message-box i {
+            margin-right: 8px; /* Smaller space between icon and text */
+            color: #28a745;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 25px; /* Smaller padding */
+            font-size: 16px; /* Smaller font size */
+            color: white;
+            background-color: #393BCA;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            margin-top: 16px; /* Reduced margin */
+        }
+        .btn:hover {
+            background-color: #0368ff;
+        }
+        .close-message {
+            display: none;
+            margin-top: 16px;
+            color: #1C1263;
+            font-size: 16px; /* Smaller font size */
+        }
+
+        /* Mobile Styles */
+        @media only screen and (max-width: 600px) {
+         
+            .container {
+                background-color: transparent; /* Remove background color of the container on mobile */
+                padding: 16px; /* Reduced padding for mobile */
+                max-width: 75%; /* More space for small screens */
+                background: white;
+            }
+
+            h1 {
+                font-size: 24px; /* Smaller font size for mobile */
+            }
+            p {
+                font-size: 14px;
+            }
+            .message-box {
+                font-size: 12px; /* Smaller font size for message box on mobile */
+                width: calc(100% - 20px); /* Adjust width for small screens */
+                padding: 12px; /* Reduced padding for mobile */
+            }
+
+            .btn {
+                padding: 10px 20px; /* Smaller padding for mobile */
+                font-size: 14px; /* Smaller font size for mobile */
+                width: 50%; /* Full width button on mobile */
+            }
+
+            .logo {
+                max-width: 55px; /* Smaller logo for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="assets/img/Layer 1.png" alt="Logo" class="logo">
+        <h1>Congratulations!</h1>
+        <div class="message-box">
+            <div>
+                <i class="fas fa-check-circle"></i>
+                You've completed the application form.
+            </div>
+            <div>
+                <i class="fas fa-envelope"></i>
+                Please wait for the announcement in your email account.
+            </div>
+            <div>
+                <i class="fas fa-bullhorn"></i>
+                Upon reviewing your submitted form, prepare the required documents.
+            </div>
+        </div>
+        <p>Thank you for applying to LEFMOGIV Security Agency Corp.</p>
+        <button class="btn" onclick="showCloseMessage()">Confirm</button>
+        <p class="close-message" id="closeMessage">Please close this page</p>
+    </div>
+    <script>
+        function showCloseMessage() {
+    var contentContainer = document.querySelector('.container');
+    var closeMessage = document.getElementById('closeMessage');
+    Array.from(contentContainer.children).forEach(child => {
+        if (child !== closeMessage) {
+            child.style.display = 'none';
+        }
+    });
+    closeMessage.style.display = 'block';
+    sessionStorage.clear();
+    setTimeout(() => {
+        window.location.href = 'index.php';
+    }, 1000); 
+}
+
+    </script>
+</body>
+</html>
