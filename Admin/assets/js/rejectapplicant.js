@@ -4,15 +4,7 @@ import { getFirestore, collection, getDocs, query, where, getDoc, doc, writeBatc
 import { getAuth, onAuthStateChanged, deleteUser } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-auth.js";
 import { getStorage, ref, deleteObject, getBlob, uploadBytes } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-storage.js";
 
-var firebaseConfig = {
-    apiKey: "AIzaSyAwZg1CODurIz0uJRiMxus28eKSd2CTHi4",
-    authDomain: "lefmogiv-f49b3.firebaseapp.com",
-    projectId: "lefmogiv-f49b3",
-    storageBucket: "lefmogiv-f49b3.appspot.com",
-    messagingSenderId: "687909819475",
-    appId: "1:687909819475:web:60699d8e2a96376939e2a6",
-    measurementId: "G-C7YD21Q71Y"
-  };
+        // data/secrets
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);

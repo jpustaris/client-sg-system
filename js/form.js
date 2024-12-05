@@ -4,15 +4,9 @@ import { getAuth } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-storage.js';
 
 // Initialize Firebase
-const firebaseConfig = {
-    apiKey: "AIzaSyAwZg1CODurIz0uJRiMxus28eKSd2CTHi4",
-    authDomain: "lefmogiv-f49b3.firebaseapp.com",
-    projectId: "lefmogiv-f49b3",
-    storageBucket: "lefmogiv-f49b3.appspot.com",
-    messagingSenderId: "687909819475",
-    appId: "1:687909819475:web:60699d8e2a96376939e2a6",
-    measurementId: "G-C7YD21Q71Y"
-};
+// data/secrets
+
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
